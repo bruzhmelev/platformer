@@ -1,0 +1,34 @@
+{
+  "name": "platformer",
+  "version": "1.0.0",
+  "description": "dodo-platformer",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=development",
+    "watch": "webpack --mode=development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruzhmelev/platformer.git"
+  },
+  "keywords": [
+    "game",
+    "platformer",
+    "phather"
+  ],
+  "author": "bruzhmelev@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bruzhmelev/platformer/issues"
+  },
+  "homepage": "https://github.com/bruzhmelev/platformer#readme",
+  "dependencies": {
+    "phaser": "^3.11.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}
