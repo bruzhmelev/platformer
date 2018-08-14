@@ -1,5 +1,5 @@
 import { AUTO, Game } from 'phaser';
-
+import { MainScene } from "./scenes/mainScene";
 
 var config = {
     type: AUTO,
@@ -7,28 +7,26 @@ var config = {
     height: 200,
     physics: {
         default: 'arcade',
-        // arcade: {
-        //     gravity: { y: 200 }
-        // }
+        arcade: {
+            gravity: { y: 200 }
+        }
     },
-    scene: {
-        preload: preload,
-        create: create,
-        update: update
-    },
+    scene: MainScene,
     backgroundColor: '#3598db'
 };
 
 var game = new Game(config);
  // Create the state that will contain the whole game
 
-function preload() {  
+function preload( ) {  
     // Here we preload the assets
     this.load.image('player', 'assets/player.png');
     this.load.image('wall', 'assets/wall.png');
     this.load.image('coin', 'assets/coin.png');
     this.load.image('enemy', 'assets/enemy.png');
 }
+
+// Create.GenerateTexture(new Genera)
 
 function create() {  
     // Start the Arcade physics system (for movements and collisions)
@@ -54,8 +52,6 @@ function create() {
     // // Create the player in the middle of the game
     this.player = this.add.sprite(70, 100, 'player');
 
-    // // Add gravity to make it fall
-    // this.player. .body.gravity.y = 800;
 
     // // Create 3 groups that will contain our objects
     // this.walls = this.add.group();
@@ -128,9 +124,9 @@ function update() {
 }
 
 // Function to kill a coin
-function takeCoin(player, coin) {
-    coin.kill();
-}
+// function takeCoin(player, coin) {
+//     coin.kill();
+// }
 
 // Function to restart the game
 function restart() {
