@@ -44,13 +44,17 @@
 
         // Design the level. x = wall, o = coin, ! = lava.
         var level = [
-            'xxxxxxxxxxxxxxxxxxxxxx',
-            '!         !          x',
-            '!                 o  x',
-            '!         o          x',
-            '!                    x',
-            '!     o   !    x     x',
-            'xxxxxxxxxxxxxxxx!!!!!x',
+            'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+            '!         !                     o o o o o   o o o o o   o o o o o   o o o o o   o o o o o   x',
+            '!                 o  x      x   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx            xxxxxxxxxxxx  xxx',
+            '!         o          x     xx                !               !                   !          x',
+            '!                    x     !x                                                               x',
+            '!     o   !    x     x          x     !             !                  !                  ! x',
+            'xxxxxxxxxxxxxxxx!!!!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x',
+            '!     o   !    x     x                                                                      x',
+            '!     o   !    x     x                                                                      x',
+            '!     o   !    x     x                                                                      x',
+            'xxxxxxxxxxxxxxxx!!!!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x',
         ];
 
         // Create the level by going through the array
@@ -123,6 +127,6 @@
 };
 
 // Initialize the game and start our state
-var game = new Phaser.Game(500, 200);  
+var game = new Phaser.Game(1900, 800 );  
 game.state.add('main', mainState);  
 game.state.start('main');
